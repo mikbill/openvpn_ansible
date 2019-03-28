@@ -1,0 +1,12 @@
+---
+- name: OpenVPN Install PlayBook
+  hosts: local
+  pre_tasks:
+    - name: "read vars"
+      include_vars: host_vars/vars.yaml
+
+  roles:
+    - generate_configuration_file
+
+- import_playbook: remote.yml
+

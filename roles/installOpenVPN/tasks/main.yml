@@ -1,0 +1,16 @@
+---
+- name: install
+  apt: pkg=openvpn state=present update_cache=true
+
+- name: copy client.conf
+  copy:
+    src: client.conf
+    dest: /etc/openvpn
+
+- name: сreate log directory
+  file:
+    path=/var/log/openvpn
+    state=directory
+
+- name: update-rc.d openvpn
+  command: "update-rc.d openvpn defaults"

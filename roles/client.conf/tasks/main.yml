@@ -1,0 +1,13 @@
+---
+- name: rename client.crt
+  lineinfile: dest=/etc/openvpn/client.conf
+    regexp='^cert'
+    insertbefore=BOF
+    line='cert {{vars.clientname}}.crt'
+
+- name: rename client.key 
+  lineinfile: dest=/etc/openvpn/client.conf
+    regexp='^key'
+    insertbefore=BOF
+    line='cert {{vars.clientname}}.key'
+              

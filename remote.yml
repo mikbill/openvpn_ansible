@@ -1,0 +1,14 @@
+---
+- name: OpenVPN Install PlayBook
+  hosts: remote
+  pre_tasks:
+    - name: "read vars"
+      include_vars: host_vars/vars.yaml
+            
+  roles:
+    - requirements
+    - installOpenVPN
+    - copy_files
+    - restartOpenVPN
+    - client.conf
+        
