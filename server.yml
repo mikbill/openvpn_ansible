@@ -1,9 +1,0 @@
----
-- name: Server generate cert
-  hosts: local
-  pre_tasks:
-     - name: "read vars"
-       include_vars: host_vars/vars.yaml  
- 
-  roles:
-    - server_generate_cert

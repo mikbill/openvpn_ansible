@@ -1,8 +1,0 @@
-clientname: 'client1'
-servername: 'server'
-pass: '1234'
-pki_path: 'pki'
-Passphrase: '1234'
-Common_Name: 'myname'
-
-distr: 'xenial'
